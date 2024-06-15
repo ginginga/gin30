@@ -8,7 +8,8 @@
     <style>
         body {
             font-family: 'ヒラギノ角ゴシック', sans-serif;
-            background-color: #000;
+            background: url('path/to/earth-image.jpg') no-repeat center center fixed;
+            background-size: cover;
             color: #fff;
             overflow-x: hidden;
         }
@@ -22,24 +23,7 @@
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            background: #000;
-        }
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('path/to/earth-image.jpg') no-repeat center center;
-            background-size: cover;
-            z-index: -1;
-            animation: moveBackground 30s linear infinite;
-        }
-        @keyframes moveBackground {
-            0% { transform: scale(1) translateY(0); }
-            50% { transform: scale(1.1) translateY(-10%); }
-            100% { transform: scale(1) translateY(0); }
+            background: none; /* heroセクションの背景をクリアにする */
         }
         .hero-text {
             text-align: center;
@@ -144,7 +128,7 @@
         <a href="https://www.instagram.com/gin_19n0" target="_blank"><img src="path/to/instagram-icon.png" alt="Instagram"></a>
         <a href="https://lin.ee/SMvzUSQ" target="_blank"><img src="path/to/line-icon.png" alt="LINE"></a>
         <a href="https://www.tiktok.com/@gi_wellness" target="_blank"><img src="path/to/tiktok-icon.png" alt="TikTok"></a>
-        <a href="https://www.facebook.com/gingai9no" target="_blank"><img src="" alt="Facebook"></a>
+        <a href="https://www.facebook.com/gingai9no" target="_blank"><img src="path/to/facebook-icon.png" alt="Facebook"></a>
     </div>
 
     <footer class="text-center mt-5">
