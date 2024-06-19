@@ -7,75 +7,99 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         @font-face {
-            font-family: 'Halfomania';
-            src: url('fonts/Halfomania.ttf') format('truetype');
-            font-weight: normal;
-            font-style: normal;
-        }
+    font-family: 'Halfomania';
+    src: url('fonts/Halfomania.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
-        @keyframes typing {
-            from { width: 0; }
-            to { width: 100%; }
-        }
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
 
-        @keyframes blink {
-            50% { border-color: transparent; }
-        }
+@keyframes blink {
+    50% { border-color: transparent; }
+}
 
-        body {
-            font-family: 'ヒラギノ角ゴシック', sans-serif;
-            background: url('path/to/earth-image2.jpg') no-repeat center center fixed;
-            background-size: cover;
-            color: #fff;
-            overflow-x: hidden;
-        }
+body {
+    font-family: 'ヒラギノ角ゴシック', sans-serif;
+    background: url('path/to/earth-image2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    overflow-x: hidden;
+}
 
-        .hero-text h1 {
-            font-family: 'Halfomania', sans-serif; /* フォントを変更 */
-            font-size: 48px; /* フォントサイズを変更 */
-            overflow: hidden; /* Ensures the content is not revealed until the animation */
-            border-right: .15em solid #fff; /* The typewriter cursor */
-            white-space: nowrap; /* Keeps the content on a single line */
-            margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-            letter-spacing: .15em; /* Adjust as needed */
-            animation: 
-                typing 3.5s steps(40, end),
-                blink .75s step-end infinite;
-        }
+.hero-text h1 {
+    font-family: 'Halfomania', sans-serif; /* フォントを変更 */
+    font-size: 48px; /* フォントサイズを変更 */
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid #fff; /* The typewriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+        typing 3.5s steps(40, end),
+        blink .75s step-end infinite;
+}
 
-        .hero {
-            position: relative;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            background: none; /* heroセクションの背景をクリアにする */
-        }
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: none; /* heroセクションの背景をクリアにする */
+}
 
-        .hero-text {
-            text-align: center;
-        }
+.hero-text {
+    text-align: center;
+}
 
-        .fixed-social {
-            position: fixed;
-            top: 50%;
-            right: 10px;
-            transform: translateY(-50%);
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* 中央寄せ */
-        }
+.fixed-social {
+    position: fixed;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 中央寄せ */
+}
 
-        .fixed-social a {
-            margin: 5px 0;
-            color: #fff;
-        }
+.fixed-social a {
+    margin: 5px 0;
+    color: #fff;
+}
 
-        .fixed-social img {
-            width: 30px;
-            height: 30px;
-        }
+.fixed-social img {
+    width: 30px;
+    height: 30px;
+}
+
+/* メディアクエリ - スマホ向け */
+@media (max-width: 767px) {
+    .hero-text h1 {
+        font-size: 36px; /* スマホ向けフォントサイズ */
+    }
+
+    .hero-text p {
+        font-size: 18px; /* スマホ向けフォントサイズ */
+    }
+
+    .fixed-social {
+        top: auto;
+        bottom: 10px;
+        right: 10px;
+        transform: none;
+        flex-direction: row;
+    }
+
+    .fixed-social a {
+        margin: 0 5px;
+    }
+}
+
     </style>
 </head>
 <body>
